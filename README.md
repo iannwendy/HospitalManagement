@@ -127,7 +127,7 @@ HOSPITAL/
 
 ```bash
 git clone https://github.com/iannwendy/HospitalManagement
-cd HOSPITAL
+cd HospitalManagement
 ```
 
 ### Step 2: Backend Setup
