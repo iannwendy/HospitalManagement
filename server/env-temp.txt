@@ -1,0 +1,6 @@
+PORT=3001
+JWT_SECRET=hospital_management_secret_key
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=
+DB_NAME=hospital_db

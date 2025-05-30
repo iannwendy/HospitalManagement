@@ -1,0 +1,133 @@
+/* Dashboard Styles */
+.dashboard-container {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.dashboard-header {
+  padding: 1.5rem 0;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-header h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.dashboard-header p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.dashboard-card {
+  transition: all 0.3s ease;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-icon {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  background-color: rgba(58, 124, 165, 0.1);
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.card-icon i {
+  font-size: 24px;
+  color: #3a7ca5;
+}
+
+/* Patient dashboard specifics */
+.dashboard-card .card-icon i {
+  color: #3a7ca5;
+}
+
+/* Doctor dashboard specifics */
+.dashboard-header[style*="2c6975"] + .container .card-icon {
+  background-color: rgba(44, 105, 117, 0.1);
+}
+
+.dashboard-header[style*="2c6975"] + .container .card-icon i {
+  color: #2c6975;
+}
+
+/* Nurse dashboard specifics */
+.dashboard-header[style*="6fb98f"] + .container .card-icon {
+  background-color: rgba(111, 185, 143, 0.1);
+}
+
+.dashboard-header[style*="6fb98f"] + .container .card-icon i {
+  color: #6fb98f;
+}
+
+/* Admin dashboard specifics */
+.dashboard-header[style*="004e64"] + .container .card-icon {
+  background-color: rgba(0, 78, 100, 0.1);
+}
+
+.dashboard-header[style*="004e64"] + .container .card-icon i {
+  color: #004e64;
+}
+
+.dashboard-footer {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e9ecef;
+}
+
+/* Button styles */
+.btn-primary {
+  background-color: #3a7ca5;
+  border-color: #3a7ca5;
+}
+
+.btn-primary:hover {
+  background-color: #2c6975;
+  border-color: #2c6975;
+}
+
+.btn-outline-secondary {
+  color: #6c757d;
+  border-color: #6c757d;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #6c757d;
+  color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .dashboard-header {
+    padding: 1rem 0;
+  }
+  
+  .dashboard-header h1 {
+    font-size: 2rem;
+  }
+  
+  .dashboard-header p {
+    font-size: 1.1rem;
+  }
+  
+  .card-icon {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+  }
+  
+  .card-icon i {
+    font-size: 20px;
+  }
+} 

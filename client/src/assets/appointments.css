@@ -1,0 +1,336 @@
+.booking-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f9f9f9;
+}
+
+.booking-header {
+  background: linear-gradient(135deg, #5fa8d3, #3a7ca5);
+  color: white;
+  padding: 2rem 0;
+}
+
+.booking-header h1 {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* Progress indicator styles */
+.booking-progress {
+  margin-bottom: 2rem;
+}
+
+.progress-steps {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  position: relative;
+  padding: 0 40px;
+}
+
+.progress-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  position: relative;
+  color: #aaa;
+  z-index: 2;
+}
+
+.progress-step.active {
+  color: #3a7ca5;
+  font-weight: 600;
+}
+
+.progress-step.completed {
+  color: #60a5fa;
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f5f5f5;
+  border: 2px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  z-index: 3;
+}
+
+.progress-step.active .step-number {
+  background-color: #3a7ca5;
+  border-color: #3a7ca5;
+  color: white;
+}
+
+.progress-step.completed .step-number {
+  background-color: #60a5fa;
+  border-color: #60a5fa;
+  color: white;
+}
+
+.progress-bar {
+  height: 6px;
+  background-color: #ddd;
+  border-radius: 3px;
+  margin: 0 2rem;
+  position: relative;
+  margin-top: -23px;
+  z-index: 0;
+}
+
+.progress-indicator {
+  height: 100%;
+  background: linear-gradient(to right, #60a5fa, #3a7ca5);
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+/* Step content styles */
+.booking-step-content {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+  margin-top: 20px;
+}
+
+.step-title {
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: 0.5rem;
+  white-space: nowrap;
+}
+
+/* Form styles */
+.form-step-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #3a7ca5;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #f5f5f5;
+  padding-bottom: 1rem;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+}
+
+.form-group {
+  flex: 1;
+  min-width: 250px;
+  padding: 0 10px;
+  margin-bottom: 1.5rem;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #f5f5f5;
+}
+
+.doctor-card {
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.doctor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.doctor-card.selected {
+  border-color: #3a7ca5;
+  background-color: rgba(58, 124, 165, 0.05);
+}
+
+.doctor-header {
+  display: flex;
+  align-items: center;
+}
+
+.doctor-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 1rem;
+  border: 2px solid #eee;
+}
+
+.doctor-info {
+  flex: 1;
+}
+
+.doctor-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.doctor-specialty {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.time-slots-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 10px;
+  margin-top: 1.5rem;
+}
+
+.time-slot {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.time-slot:hover {
+  background-color: #f5f5f5;
+}
+
+.time-slot.selected {
+  background-color: #3a7ca5;
+  color: white;
+  border-color: #3a7ca5;
+}
+
+.time-slot.unavailable {
+  background-color: #f5f5f5;
+  color: #aaa;
+  cursor: not-allowed;
+  text-decoration: line-through;
+}
+
+/* Notification settings */
+.notification-settings {
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+
+.notification-title {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.notification-option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.notification-option:last-child {
+  margin-bottom: 0;
+}
+
+.notification-checkbox {
+  margin-right: 1rem;
+}
+
+.notification-label {
+  flex: 1;
+}
+
+.notification-description {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.3rem;
+}
+
+/* Appointment summary */
+.appointment-summary {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+
+.summary-title {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.summary-item {
+  display: flex;
+  margin-bottom: 0.8rem;
+}
+
+.summary-label {
+  width: 150px;
+  font-weight: 600;
+  color: #666;
+}
+
+.summary-value {
+  flex: 1;
+}
+
+/* Success page */
+.success-page {
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.success-icon {
+  font-size: 5rem;
+  color: #10b981;
+  margin-bottom: 2rem;
+}
+
+.success-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.success-message {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .step-title {
+    display: none;
+  }
+  
+  .progress-steps::after {
+    display: none;
+  }
+  
+  .progress-step {
+    flex: 0;
+    margin: 0 auto;
+  }
+  
+  .progress-bar {
+    margin: 0 15%;
+    margin-top: -23px;
+  }
+  
+  .booking-step-content {
+    padding: 1.5rem;
+    margin-top: 30px;
+  }
+} 
